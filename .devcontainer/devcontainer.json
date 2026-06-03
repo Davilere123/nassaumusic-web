@@ -1,0 +1,14 @@
+{
+  "name": "NassauMusic Web",
+  "image": "mcr.microsoft.com/devcontainers/javascript-node:20",
+  "customizations": {
+    "vscode": {
+      "settings": {},
+      "extensions": [
+        "dbaeumer.vscode-eslint"
+      ]
+    }
+  },
+  "postCreateCommand": "npm ci",
+  "forwardPorts": [5173]
+}
