@@ -1,0 +1,207 @@
+/* src/screens/HomeScreen.css */
+.home-container {
+  flex: 1;
+  background-color: #06000c; /* Tema Dark Mode Moderno sugerido */
+  height: 100vh;
+  width: 100%;
+  overflow-y: auto;
+  color: #fff;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+.scroll-view {
+  padding-bottom: 110px;
+}
+
+/* Header */
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding: 16px;
+  margin-top: 20px;
+}
+
+.greeting {
+  color: #fff;
+  font-size: 22px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.header-icons {
+  display: flex;
+}
+
+/* Sections */
+.section {
+  margin-top: 24px;
+  padding-left: 16px;
+}
+
+.section-title {
+  color: #fff;
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 12px;
+  margin-top: 0;
+}
+
+/* Horizontal Scroll for lists */
+.horizontal-scroll {
+  display: flex;
+  overflow-x: auto;
+  gap: 16px;
+  padding-right: 16px;
+  /* Hide scrollbar for webkit */
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.horizontal-scroll::-webkit-scrollbar {
+  display: none;
+}
+
+/* Friend Card */
+.friend-card {
+  width: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+.friend-card:hover .friend-avatar {
+  transform: scale(1.05);
+  transition: transform 0.2s ease;
+}
+
+.avatar-wrapper {
+  position: relative;
+}
+
+.friend-avatar {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+  transition: transform 0.2s ease;
+}
+
+.friend-music-icon {
+  position: absolute;
+  right: -5px;
+  bottom: 0;
+  background-color: #9333ea;
+  border-radius: 50%;
+  padding: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+}
+
+.friend-name {
+  color: #fff;
+  font-size: 12px;
+  font-weight: bold;
+  margin-top: 8px;
+  text-align: center;
+}
+
+.friend-listening {
+  color: #aaa;
+  font-size: 10px;
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 100%;
+}
+
+/* Track Item */
+.track-item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 16px;
+  padding-right: 16px;
+  background: none;
+  border: none;
+  width: 100%;
+  text-align: left;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  border-radius: 8px;
+}
+
+.track-item:hover {
+  background-color: rgba(147, 51, 234, 0.1);
+}
+
+.track-art {
+  width: 50px;
+  height: 50px;
+  border-radius: 4px;
+  object-fit: cover;
+}
+
+.track-info {
+  flex: 1;
+  margin-left: 12px;
+  display: flex;
+  flex-direction: column;
+}
+
+.track-title {
+  color: #fff;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.track-artist {
+  color: #aaa;
+  font-size: 12px;
+  margin-top: 2px;
+}
+
+.track-more {
+  color: #aaa;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Album Card */
+.album-card {
+  width: 140px;
+  display: flex;
+  flex-direction: column;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  text-align: left;
+}
+
+.album-card:hover .album-image {
+  transform: scale(1.02);
+  transition: transform 0.2s ease;
+}
+
+.album-image {
+  width: 140px;
+  height: 140px;
+  border-radius: 8px;
+  object-fit: cover;
+  transition: transform 0.2s ease;
+}
+
+.album-title {
+  color: #fff;
+  margin-top: 8px;
+  font-size: 13px;
+  font-weight: 600;
+}

@@ -1,0 +1,94 @@
+/* src/components/MiniPlayer.css */
+/* Mobile First */
+.miniplayer-container {
+  position: absolute;
+  bottom: 100px; /* Mais pra cima no celular */
+  left: 8px;
+  right: 8px;
+  height: 60px;
+  background-color: rgba(147, 51, 234, 0.15); /* Lilás bem levinho e bem transparente */
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0 12px;
+  border-radius: 8px;
+  z-index: 1001; 
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  cursor: pointer;
+  transition: transform 0.2s ease, background-color 0.2s ease;
+  border: 1px solid rgba(147, 51, 234, 0.2); /* Bordinha lilás sutil */
+}
+
+.miniplayer-container:hover {
+  background-color: rgba(147, 51, 234, 0.25);
+}
+
+.mini-art {
+  width: 40px;
+  height: 40px;
+  border-radius: 4px;
+  object-fit: cover;
+}
+
+.mini-info {
+  flex: 1;
+  margin-left: 12px;
+  display: flex;
+  flex-direction: column;
+}
+
+.mini-title {
+  color: #fff;
+  font-size: 14px;
+  font-weight: bold;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.mini-artist {
+  color: #aaa;
+  font-size: 12px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.mini-time {
+  color: #888;
+  font-size: 10px;
+  margin-top: 1px;
+}
+
+.mini-play-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  transition: transform 0.1s ease;
+}
+
+.mini-play-btn:active {
+  transform: scale(0.9);
+}
+
+/* PC / Tablet Responsiveness */
+@media (min-width: 768px) {
+  .miniplayer-container {
+    left: auto;
+    right: 20px;
+    bottom: 110px; /* Um tiquinho mais pra cima no PC */
+    width: 300px;
+    border-radius: 12px;
+    background-color: rgba(147, 51, 234, 0.15); /* Mesma transparência lilás */
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border: 1px solid rgba(147, 51, 234, 0.3);
+  }
+}

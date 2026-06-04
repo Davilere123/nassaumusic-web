@@ -1,0 +1,105 @@
+/* src/screens/PlaylistScreen.css */
+.playlist-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #121212;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  animation: slideIn 0.3s ease-out;
+}
+
+@keyframes slideIn {
+  from { transform: translateX(100%); }
+  to { transform: translateX(0); }
+}
+
+.playlist-back-btn {
+  position: absolute;
+  top: 40px;
+  left: 20px;
+  z-index: 10;
+  background-color: #9333ea;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  cursor: pointer;
+  color: #fff;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+}
+
+.playlist-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 30px;
+  margin-top: 100px;
+}
+
+.playlist-cover {
+  width: 200px;
+  height: 200px;
+  border-radius: 8px;
+  object-fit: cover;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+}
+
+.playlist-title {
+  color: #fff;
+  font-size: 24px;
+  font-weight: bold;
+  margin-top: 15px;
+  margin-bottom: 5px;
+  text-align: center;
+}
+
+.playlist-sub {
+  color: #aaa;
+  font-size: 14px;
+  margin: 0;
+}
+
+.playlist-track-list {
+  display: flex;
+  flex-direction: column;
+  padding: 0 20px 100px 20px;
+}
+
+.playlist-track-item {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #333;
+  background: none;
+  border-left: none;
+  border-right: none;
+  border-top: none;
+  cursor: pointer;
+  text-align: left;
+}
+
+.playlist-track-item:hover {
+  background-color: rgba(147, 51, 234, 0.1);
+}
+
+.playlist-track-title {
+  color: #fff;
+  font-size: 16px;
+  font-weight: 500;
+  margin: 0;
+}
+
+.playlist-track-artist {
+  color: #aaa;
+  font-size: 14px;
+  margin: 2px 0 0 0;
+}
