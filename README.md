@@ -1,4 +1,7 @@
-# nassaumusic-web
+![Logo do NassauMusic Web](src/assets/logoweb.png)
+
+---
+
 Este é um reprodutor de música que funciona totalmente no navegador, feito para o trabalho final da matéria de **Códigos de Alta Performance Web**, ministrada pelo professor Victor.  
 Ele é feito utilizando **React JS**, sendo um port do [NassauMusic original feito em React Native](https://github.com/davilere123/nassaumusic "Repositório do NassauMusic original em React Native") para que possa funcionar na Web.
 
