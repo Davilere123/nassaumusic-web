@@ -1,5 +1,4 @@
 ![Logo do NassauMusic Web](src/assets/logoweb.png)
-
 ---
 
 Este é um reprodutor de música que funciona totalmente no navegador, feito para o trabalho final da matéria de **Códigos de Alta Performance Web**, ministrada pelo professor Victor.  
