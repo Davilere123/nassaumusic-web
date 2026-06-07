@@ -8,6 +8,9 @@ export const AudioProvider = ({ children }) => {
   const [positionMs, setPositionMs] = useState(0);
   const [durationMs, setDurationMs] = useState(0);
   
+  // Estado para as músicas da biblioteca não sumirem ao trocar de aba
+  const [musicas, setMusicas] = useState([]);
+  
   // UI State for Player Modal
   const [isPlayerOpen, setIsPlayerOpen] = useState(false);
 
@@ -80,7 +83,9 @@ export const AudioProvider = ({ children }) => {
       playPrevious,
       isPlayerOpen,
       openPlayer,
-      closePlayer
+      closePlayer,
+      musicas,
+      setMusicas
     }}>
       {children}
     </AudioContext.Provider>

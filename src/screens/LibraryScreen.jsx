@@ -5,8 +5,7 @@ import './LibraryScreen.css';
 import { useAudio } from '../context/AudioContext';
 
 export default function LibraryScreen() {
-  const { playTrack, openPlayer } = useAudio();
-  const [musicas, setMusicas] = useState([]);
+  const { playTrack, openPlayer, musicas, setMusicas } = useAudio();
   const fileInputRef = useRef(null);
 
   // Função para remover a música do estado local

@@ -9,7 +9,9 @@ import AuthScreen from './screens/AuthScreen';
 import './App.css';
 
 function App() {
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const [isLoggedIn, setIsLoggedIn] = useState(() => {
+    return localStorage.getItem('currentUser') !== null;
+  });
   const [currentScreen, setCurrentScreen] = useState('MainTabs');
   const [screenParams, setScreenParams] = useState(null);
 

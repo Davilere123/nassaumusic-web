@@ -18,8 +18,30 @@ export default function AuthScreen({ onLogin }) {
       return;
     }
 
-    // Regra simples de login
-    onLogin();
+    const users = JSON.parse(localStorage.getItem('users') || '[]');
+    
+    if (viewMode === 'register') {
+      const userExists = users.find(u => u.nome === nome.trim());
+      if (userExists) {
+        alert('Este nome já está em uso. Tente outro ou faça login.');
+        return;
+      }
+      
+      users.push({ nome: nome.trim(), senha });
+      localStorage.setItem('users', JSON.stringify(users));
+      localStorage.setItem('currentUser', nome.trim());
+      
+      alert('Conta criada com sucesso!');
+      onLogin();
+    } else if (viewMode === 'login') {
+      const user = users.find(u => u.nome === nome.trim() && u.senha === senha);
+      if (user) {
+        localStorage.setItem('currentUser', nome.trim());
+        onLogin();
+      } else {
+        alert('Nome ou senha incorretos.');
+      }
+    }
   };
 
   if (viewMode === 'welcome') {
