@@ -29,8 +29,8 @@ export default function PlayerScreen() {
   if (!currentTrack || !isPlayerOpen) return null;
 
   return (
-    <div className="player-overlay">
-      <div className="player-modal-content">
+    <div className="player-overlay" onClick={closePlayer}>
+      <div className="player-modal-content" onClick={(e) => e.stopPropagation()}>
         <button className="player-close-btn" onClick={closePlayer}>
           <ChevronDown size={30} />
         </button>

@@ -133,7 +133,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: transform 0.1s ease;
+  transition: transform 0.1s cubic-bezier(0.25, 0.8, 0.25, 1);
 }
 
 .player-ctrl-btn:active {

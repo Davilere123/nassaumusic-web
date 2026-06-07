@@ -3,6 +3,7 @@
   flex: 1;
   background-color: #06000c; /* Dark modern theme */
   height: 100vh;
+  height: 100dvh;
   width: 100vw;
   display: flex;
   flex-direction: column;
@@ -58,7 +59,7 @@
   border: none;
   cursor: pointer;
   margin-bottom: 20px;
-  transition: transform 0.1s ease, background-color 0.2s;
+  transition: transform 0.1s cubic-bezier(0.25, 0.8, 0.25, 1), background-color 0.2s;
 }
 
 .auth-primary-btn:hover {
@@ -89,7 +90,7 @@
   align-items: center;
   border: 2px solid #9333ea;
   cursor: pointer;
-  transition: transform 0.1s ease, background-color 0.2s;
+  transition: transform 0.1s cubic-bezier(0.25, 0.8, 0.25, 1), background-color 0.2s;
 }
 
 .auth-secondary-btn:hover {
@@ -181,7 +182,7 @@
   border-radius: 25px;
   border: none;
   cursor: pointer;
-  transition: transform 0.1s ease, background-color 0.2s;
+  transition: transform 0.1s cubic-bezier(0.25, 0.8, 0.25, 1), background-color 0.2s;
 }
 
 .auth-action-btn:hover {

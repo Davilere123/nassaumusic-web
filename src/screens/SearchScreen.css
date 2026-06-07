@@ -4,6 +4,7 @@
   background-color: #06000c;
   padding: 16px;
   height: 100vh;
+  height: 100dvh;
   width: 100%;
   overflow-y: auto;
   box-sizing: border-box;
@@ -19,13 +20,27 @@
 
 .search-input {
   width: 100%;
-  background-color: #fff;
+  background-color: rgba(147, 51, 234, 0.15);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  border: 1px solid rgba(147, 51, 234, 0.3);
   border-radius: 8px;
   padding: 12px;
   margin-bottom: 20px;
-  border: none;
+  color: #fff;
   font-size: 16px;
   box-sizing: border-box;
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.search-input::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.search-input:focus {
+  outline: none;
+  border-color: rgba(147, 51, 234, 0.8);
+  background-color: rgba(147, 51, 234, 0.25);
 }
 
 .search-sub {
@@ -51,7 +66,7 @@
   justify-content: flex-start;
   border: none;
   cursor: pointer;
-  transition: transform 0.2s ease;
+  transition: transform 0.2s cubic-bezier(0.25, 0.8, 0.25, 1);
 }
 
 .search-card:hover {
@@ -95,7 +110,7 @@
   width: 100%;
   text-align: left;
   cursor: pointer;
-  transition: background-color 0.2s ease;
+  transition: background-color 0.2s cubic-bezier(0.25, 0.8, 0.25, 1);
   border-radius: 8px;
 }
 

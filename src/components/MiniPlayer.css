@@ -17,7 +17,7 @@
   z-index: 1001; 
   box-shadow: 0 4px 10px rgba(0,0,0,0.3);
   cursor: pointer;
-  transition: transform 0.2s ease, background-color 0.2s ease;
+  transition: transform 0.2s cubic-bezier(0.25, 0.8, 0.25, 1), background-color 0.2s cubic-bezier(0.25, 0.8, 0.25, 1);
   border: 1px solid rgba(147, 51, 234, 0.2); /* Bordinha lilás sutil */
 }
 
@@ -71,7 +71,7 @@
   align-items: center;
   justify-content: center;
   color: #fff;
-  transition: transform 0.1s ease;
+  transition: transform 0.1s cubic-bezier(0.25, 0.8, 0.25, 1);
 }
 
 .mini-play-btn:active {

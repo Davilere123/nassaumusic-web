@@ -4,6 +4,7 @@
   background-color: #06000c;
   /* Tema Dark Mode Moderno sugerido */
   height: 100vh;
+  height: 100dvh;
   width: 100%;
   overflow-y: auto;
   color: #fff;
@@ -47,7 +48,7 @@
   justify-content: center;
   gap: 8px;
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
   color: #fff;
   overflow: hidden;
 }
@@ -59,7 +60,7 @@
   display: inline-block;
   opacity: 1;
   width: auto;
-  transition: all 0.3s ease;
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
 }
 
 /* PC */
@@ -126,7 +127,7 @@
 
 .friend-card:hover .friend-avatar {
   transform: scale(1.05);
-  transition: transform 0.2s ease;
+  transition: transform 0.2s cubic-bezier(0.25, 0.8, 0.25, 1);
 }
 
 .avatar-wrapper {
@@ -138,7 +139,7 @@
   height: 60px;
   border-radius: 50%;
   object-fit: cover;
-  transition: transform 0.2s ease;
+  transition: transform 0.2s cubic-bezier(0.25, 0.8, 0.25, 1);
 }
 
 .friend-music-icon {
@@ -184,7 +185,7 @@
   width: 100%;
   text-align: left;
   cursor: pointer;
-  transition: background-color 0.2s ease;
+  transition: background-color 0.2s cubic-bezier(0.25, 0.8, 0.25, 1);
   border-radius: 8px;
 }
 
@@ -240,7 +241,7 @@
 
 .album-card:hover .album-image {
   transform: scale(1.02);
-  transition: transform 0.2s ease;
+  transition: transform 0.2s cubic-bezier(0.25, 0.8, 0.25, 1);
 }
 
 .album-image {
@@ -248,7 +249,7 @@
   height: 140px;
   border-radius: 8px;
   object-fit: cover;
-  transition: transform 0.2s ease;
+  transition: transform 0.2s cubic-bezier(0.25, 0.8, 0.25, 1);
 }
 
 .album-title {
