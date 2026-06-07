@@ -11,6 +11,11 @@ Ele é feito utilizando **React JS**, sendo um port do [NassauMusic original fei
 - Se adapta tanto a telas grandes, como as de computadores, quanto à telas menores, como de celulares.
 
 ## Como baixar e executar
+### Abrindo pela Vercel
+[É possível acessar o app através da Vercel.](https://nassaumusic-web.vercel.app/ "Deploy do NassauMusic Web na Vercel")  
+> **Observação:** O deploy na Vercel não possui efeitos de desfoque por conta de alguma questão da plataforma que não conseguimos resolver ou identificar. Isso pode afetar a experiência do usuário em termos de legibilidade. Portanto, essa versão **não representa a experiência real do app**.
+
+### Executando localmente
 1 - Instale o **node.js** com **npm**. Recomenda-se o [site oficial](https://nodejs.org/ "Site oficial do node.js");  
 2 - Clone o repositório;  
 3 - Abra um terminal dentro da pasta do repositório;  
