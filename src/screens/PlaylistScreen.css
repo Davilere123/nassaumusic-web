@@ -10,12 +10,17 @@
   display: flex;
   flex-direction: column;
   overflow-y: auto;
-  animation: slideIn 0.3s ease-out;
+  animation: slideIn 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
 }
 
 @keyframes slideIn {
-  from { transform: translateX(100%); }
-  to { transform: translateX(0); }
+  from {
+    transform: translateX(100%);
+  }
+
+  to {
+    transform: translateX(0);
+  }
 }
 
 .playlist-back-btn {
@@ -33,7 +38,7 @@
   border: none;
   cursor: pointer;
   color: #fff;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
 }
 
 .playlist-header {
@@ -49,7 +54,7 @@
   height: 200px;
   border-radius: 8px;
   object-fit: cover;
-  box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
 }
 
 .playlist-title {

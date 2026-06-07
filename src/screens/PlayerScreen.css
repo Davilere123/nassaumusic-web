@@ -10,7 +10,8 @@
   /* Fundo lilás transparente do mobile */
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
-  box-shadow: inset 0 0 100px rgba(0, 0, 0, 0.5); /* Sombra interna reduzida */
+  box-shadow: inset 0 0 100px rgba(0, 0, 0, 0.5);
+  /* Sombra interna reduzida */
   z-index: 2000;
   display: flex;
   flex-direction: column;
@@ -96,6 +97,7 @@
 /* Custom HTML5 Range Input to look like a slider */
 .player-slider {
   -webkit-appearance: none;
+  appearance: none;
   width: 100%;
   height: 4px;
   background: rgba(255, 255, 255, 0.2);
@@ -103,7 +105,7 @@
   outline: none;
   cursor: pointer;
   margin-bottom: 10px;
-  box-shadow: 0 1px 3px rgba(0,0,0,0.3);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
 }
 
 .player-slider::-webkit-slider-thumb {
