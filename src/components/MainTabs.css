@@ -28,6 +28,7 @@
   /* Glassmorphism lilás */
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
+  transform: translate3d(0, 0, 0); /* Força a aceleração de hardware no iOS para corrigir o blur */
   display: flex;
   justify-content: space-around;
   align-items: center;
