@@ -72,7 +72,7 @@ export default function LibraryScreen() {
       <div className="library-list">
         {musicas.map((item) => (
           <div key={item.id} className="lib-item-container">
-            <button className="lib-item" onClick={() => { playTrack(item); openPlayer(); }}>
+            <button className="lib-item" onClick={() => { playTrack(item, musicas); openPlayer(); }}>
               <img src={item.capa} alt="Capa" className="lib-art" />
               <div className="lib-text-container">
                 <span className="lib-title">{item.titulo}</span>

@@ -10,7 +10,7 @@ export default function HomeScreen({ navigate }) {
 
   // Função para tocar e abrir a tela cheia
   const handlePlay = (item) => {
-    playTrack(item);
+    playTrack(item, tracks);
     openPlayer();
   };
 

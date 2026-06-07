@@ -15,13 +15,17 @@ export const AudioProvider = ({ children }) => {
   const [isPlayerOpen, setIsPlayerOpen] = useState(false);
 
   const audioRef = useRef(new Audio());
+  const currentTrackRef = useRef(null);
+  const currentPlaylistRef = useRef([]);
 
   useEffect(() => {
     const audio = audioRef.current;
     
     const updateTime = () => setPositionMs(audio.currentTime * 1000);
     const updateDuration = () => setDurationMs(audio.duration * 1000);
-    const handleEnded = () => setIsPlaying(false);
+    
+    // Agora o final da música vai tocar a próxima
+    const handleEnded = () => playNext();
     const handlePlayEvent = () => setIsPlaying(true);
     const handlePauseEvent = () => setIsPlaying(false);
 
@@ -40,8 +44,12 @@ export const AudioProvider = ({ children }) => {
     };
   }, []);
 
-  const playTrack = (track) => {
+  const playTrack = (track, playlist = null) => {
     setCurrentTrack(track);
+    currentTrackRef.current = track;
+    if (playlist) {
+      currentPlaylistRef.current = playlist;
+    }
     audioRef.current.src = track.url;
     audioRef.current.play().catch(e => console.error("Error playing audio", e));
   };
@@ -61,11 +69,27 @@ export const AudioProvider = ({ children }) => {
   };
 
   const playNext = () => {
-    console.log("Mock playNext");
+    const track = currentTrackRef.current;
+    const list = currentPlaylistRef.current;
+    if (!track || !list || list.length === 0) return;
+    
+    const currentIndex = list.findIndex(t => t.id === track.id);
+    if (currentIndex !== -1) {
+      const nextIndex = (currentIndex + 1) % list.length;
+      playTrack(list[nextIndex]); // playlist já está salva no ref, não precisa passar de novo
+    }
   };
 
   const playPrevious = () => {
-    console.log("Mock playPrevious");
+    const track = currentTrackRef.current;
+    const list = currentPlaylistRef.current;
+    if (!track || !list || list.length === 0) return;
+    
+    const currentIndex = list.findIndex(t => t.id === track.id);
+    if (currentIndex !== -1) {
+      const prevIndex = (currentIndex - 1 + list.length) % list.length;
+      playTrack(list[prevIndex]);
+    }
   };
 
   const openPlayer = () => setIsPlayerOpen(true);

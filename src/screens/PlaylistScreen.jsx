@@ -12,7 +12,7 @@ export default function PlaylistScreen({ album, goBack }) {
   const currentAlbum = album || { title: 'Playlist Desconhecida', image: 'https://picsum.photos/200/200' };
 
   const handlePlay = (item) => {
-    playTrack(item); 
+    playTrack(item, tracks); 
     openPlayer();
   };
 
