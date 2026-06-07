@@ -1,3 +1,10 @@
+/**
+ * MainTabs.css
+ * 
+ * Estilos da barra de navegação principal inferior e suas animações.
+ * Inclui o efeito glassmorphism e controle de responsividade.
+ */
+
 .tabs-wrapper {
   display: flex;
   flex-direction: column;
@@ -46,7 +53,6 @@
   transition: color 0.2s cubic-bezier(0.25, 0.8, 0.25, 1), transform 0.2s cubic-bezier(0.25, 0.8, 0.25, 1);
   padding: 10px;
   filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.565));
-  /* Sombra nos ícones e textos */
 }
 
 .tab-item:hover {

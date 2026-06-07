@@ -1,4 +1,10 @@
-// src/screens/SearchScreen.jsx
+/**
+ * SearchScreen.jsx
+ * 
+ * Tela de busca unificada.
+ * Pesquisa faixas tanto na base de dados global (streaming via mockData)
+ * quanto na biblioteca pessoal de músicas importadas (offline).
+ */
 import React, { useState } from 'react';
 import './SearchScreen.css';
 import { recommendedAlbums, tracks } from '../mockData.js';

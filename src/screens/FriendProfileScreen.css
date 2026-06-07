@@ -1,4 +1,10 @@
-/* src/screens/FriendProfileScreen.css */
+/**
+ * FriendProfileScreen.css
+ * 
+ * Estilos do perfil de amigos.
+ * Inclui o topo borrado e a lista de atividades.
+ */
+
 .friend-profile-overlay {
   position: absolute;
   top: 0;
@@ -45,9 +51,7 @@
   margin-top: -60px;
   padding-bottom: 100px;
   position: relative;
-  /* Cria contexto de empilhamento */
   z-index: 2;
-  /* Garante que ficará acima do cover borrado */
 }
 
 .friend-avatar-large {

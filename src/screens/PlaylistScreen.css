@@ -1,4 +1,10 @@
-/* src/screens/PlaylistScreen.css */
+/**
+ * PlaylistScreen.css
+ * 
+ * Estilos da lista de reprodução do álbum.
+ * Define o cabeçalho do álbum e o formato em lista das músicas.
+ */
+
 .playlist-overlay {
   position: absolute;
   top: 0;

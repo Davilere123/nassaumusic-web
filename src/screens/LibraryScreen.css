@@ -1,4 +1,10 @@
-/* src/screens/LibraryScreen.css */
+/**
+ * LibraryScreen.css
+ * 
+ * Estilos da biblioteca de músicas offline.
+ * Organiza a lista de itens e o botão de importar faixas locais.
+ */
+
 .library-container {
   flex: 1;
   background-color: #06000c;
@@ -46,10 +52,9 @@
   display: flex;
   flex-direction: column;
   gap: 15px;
-  padding-bottom: 110px; /* Space for tabs */
+  padding-bottom: 110px;
 }
 
-/* Reusing some track items styling from Home */
 .lib-item-container {
   display: flex;
   flex-direction: row;

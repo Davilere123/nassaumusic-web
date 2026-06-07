@@ -1,14 +1,17 @@
-/* src/components/MiniPlayer.css */
-/* Mobile First */
+/**
+ * MiniPlayer.css
+ * 
+ * Estilos do player flutuante (MiniPlayer).
+ * Define as sombras, posicionamento acima da barra de navegação e responsividade.
+ */
+
 .miniplayer-container {
   position: absolute;
   bottom: 100px;
-  /* Mais pra cima no celular */
   left: 8px;
   right: 8px;
   height: 60px;
   background-color: rgba(147, 51, 234, 0.15);
-  /* Lilás bem levinho e bem transparente */
   backdrop-filter: blur(15px);
   -webkit-backdrop-filter: blur(15px);
   display: flex;
@@ -17,11 +20,10 @@
   padding: 0 12px;
   border-radius: 8px;
   z-index: 1001;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5); /* Sombra reduzida */
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
   cursor: pointer;
   transition: transform 0.2s cubic-bezier(0.25, 0.8, 0.25, 1), background-color 0.2s cubic-bezier(0.25, 0.8, 0.25, 1);
   border: 1px solid rgba(147, 51, 234, 0.2);
-  /* Bordinha lilás sutil */
 }
 
 .miniplayer-container:hover {
@@ -33,7 +35,7 @@
   height: 40px;
   border-radius: 4px;
   object-fit: cover;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5); /* Sombra na arte */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
 }
 
 .mini-info {
@@ -41,7 +43,7 @@
   margin-left: 12px;
   display: flex;
   flex-direction: column;
-  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.6)); /* Sombra nos textos */
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.6));
 }
 
 .mini-title {
@@ -77,24 +79,21 @@
   justify-content: center;
   color: #fff;
   transition: transform 0.1s cubic-bezier(0.25, 0.8, 0.25, 1);
-  filter: drop-shadow(0 2px 6px rgba(0, 0, 0, 0.5)); /* Sombra no botão de play */
+  filter: drop-shadow(0 2px 6px rgba(0, 0, 0, 0.5));
 }
 
 .mini-play-btn:active {
   transform: scale(0.9);
 }
 
-/* PC / Tablet Responsiveness */
 @media (min-width: 768px) {
   .miniplayer-container {
     left: auto;
     right: 20px;
     bottom: 110px;
-    /* Um tiquinho mais pra cima no PC */
     width: 300px;
     border-radius: 12px;
     background-color: rgba(147, 51, 234, 0.15);
-    /* Mesma transparência lilás */
     backdrop-filter: blur(15px);
     -webkit-backdrop-filter: blur(15px);
     border: 1px solid rgba(147, 51, 234, 0.3);

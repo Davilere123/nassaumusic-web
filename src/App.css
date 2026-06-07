@@ -1,4 +1,9 @@
-/* src/App.css */
+/**
+ * App.css
+ * 
+ * Estilos estruturais do contêiner principal da aplicação.
+ * Garante que o app ocupe 100% da tela.
+ */
 .app-wrapper {
   margin: 0;
   padding: 0;

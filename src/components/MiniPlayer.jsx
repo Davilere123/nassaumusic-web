@@ -1,4 +1,10 @@
-// src/components/MiniPlayer.jsx
+/**
+ * MiniPlayer.jsx
+ * 
+ * O widget de música fixo que aparece na parte inferior (acima da navegação).
+ * Sincronizado diretamente com o AudioContext para exibir o status atual da música global.
+ */
+
 import React from 'react';
 import { Play, Pause } from 'lucide-react';
 import { useAudio } from '../context/AudioContext';
@@ -27,10 +33,10 @@ export default function MiniPlayer() {
         <span className="mini-time">{formatTime(positionMs)}</span>
       </div>
 
-      <button 
-        className="mini-play-btn" 
+      <button
+        className="mini-play-btn"
         onClick={(e) => {
-          e.stopPropagation(); // Evita abrir o modal ao clicar no play
+          e.stopPropagation(); // Evita abrir o player ao clicar no play
           togglePlayPause();
         }}
       >

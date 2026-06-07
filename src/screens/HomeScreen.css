@@ -1,8 +1,14 @@
-/* src/screens/HomeScreen.css */
+/**
+ * HomeScreen.css
+ * 
+ * Estilos da tela inicial.
+ * Define o layout das listas horizontais de músicas e álbuns,
+ * bem como a seção de atividades dos amigos.
+ */
+
 .home-container {
   flex: 1;
   background-color: #06000c;
-  /* Tema Dark Mode Moderno sugerido */
   height: 100vh;
   height: 100dvh;
   width: 100%;
@@ -15,7 +21,6 @@
   padding-bottom: 110px;
 }
 
-/* Header */
 .header {
   display: flex;
   justify-content: space-between;
@@ -34,10 +39,8 @@
   display: flex;
 }
 
-/* Logout Button */
 .home-logout-btn {
   background-color: rgba(220, 38, 114, 0.15);
-  /* Vermelhinho com blur */
   backdrop-filter: blur(15px);
   -webkit-backdrop-filter: blur(15px);
   border: 1px solid rgba(220, 38, 84, 0.3);
@@ -63,18 +66,15 @@
   transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
 }
 
-/* PC */
 @media (min-width: 768px) {
   .home-logout-text {
     width: 0;
     opacity: 0;
     margin-left: -8px;
-    /* Remove o espaçamento do gap quando invisível */
   }
 
   .home-logout-btn:hover .home-logout-text {
     width: 30px;
-    /* Largura da palavra Sair */
     opacity: 1;
     margin-left: 0;
   }
@@ -84,7 +84,6 @@
   }
 }
 
-/* Sections */
 .section {
   margin-top: 24px;
   padding-left: 16px;
@@ -98,13 +97,11 @@
   margin-top: 0;
 }
 
-/* Horizontal Scroll for lists */
 .horizontal-scroll {
   display: flex;
   overflow-x: auto;
   gap: 16px;
   padding-right: 16px;
-  /* Hide scrollbar for webkit */
   -ms-overflow-style: none;
   scrollbar-width: none;
 }
@@ -113,7 +110,6 @@
   display: none;
 }
 
-/* Friend Card */
 .friend-card {
   width: 100px;
   display: flex;
@@ -173,7 +169,6 @@
   width: 100%;
 }
 
-/* Track Item */
 .track-item {
   display: flex;
   flex-direction: row;
@@ -227,7 +222,6 @@
   justify-content: center;
 }
 
-/* Album Card */
 .album-card {
   width: 140px;
   display: flex;

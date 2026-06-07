@@ -1,6 +1,11 @@
-// src/screens/PlaylistScreen.jsx
+/**
+ * PlaylistScreen.jsx
+ * 
+ * Tela exibida sobre a interface principal quando o usuário seleciona um álbum
+ * da seção "Feito para você". Renderiza a arte, título e a lista de faixas do álbum.
+ */
 import React from 'react';
-import { ChevronLeft } from 'lucide-react';
+import { ChevronLeft, Play } from 'lucide-react';
 import { useAudio } from '../context/AudioContext';
 import { tracks } from '../mockData.js';
 import './PlaylistScreen.css';

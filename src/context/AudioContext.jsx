@@ -5,6 +5,7 @@
  * Ele usa a Context API do React para criar um player de música global que
  * continua tocando independente da tela em que o usuário está navegando.
  */
+
 import React, { createContext, useContext, useState, useRef, useEffect } from 'react';
 
 const AudioContext = createContext();
@@ -15,10 +16,10 @@ export const AudioProvider = ({ children }) => {
   const [isPlaying, setIsPlaying] = useState(false);
   const [positionMs, setPositionMs] = useState(0);
   const [durationMs, setDurationMs] = useState(0);
-  
+
   // Estado global para as músicas da biblioteca não sumirem ao trocar de aba (Lifting State Up)
   const [musicas, setMusicas] = useState([]);
-  
+
   // Controle de visibilidade do Player Gigante
   const [isPlayerOpen, setIsPlayerOpen] = useState(false);
 
@@ -30,14 +31,14 @@ export const AudioProvider = ({ children }) => {
   // Configura os ouvintes (listeners) do elemento <audio> HTML5
   useEffect(() => {
     const audio = audioRef.current;
-    
+
     // Atualiza a barra de progresso da música em tempo real
     const updateTime = () => setPositionMs(audio.currentTime * 1000);
     const updateDuration = () => setDurationMs(audio.duration * 1000);
-    
+
     // Quando a música acaba, pula para a próxima automaticamente
     const handleEnded = () => playNext();
-    
+
     // Sincroniza os botões de Play/Pause com a realidade do player nativo
     const handlePlayEvent = () => setIsPlaying(true);
     const handlePauseEvent = () => setIsPlaying(false);
@@ -117,7 +118,7 @@ export const AudioProvider = ({ children }) => {
     const track = currentTrackRef.current;
     const list = currentPlaylistRef.current;
     if (!track || !list || list.length === 0) return;
-    
+
     const currentIndex = list.findIndex(t => t.id === track.id);
     if (currentIndex !== -1) {
       const nextIndex = (currentIndex + 1) % list.length;
@@ -129,7 +130,7 @@ export const AudioProvider = ({ children }) => {
     const track = currentTrackRef.current;
     const list = currentPlaylistRef.current;
     if (!track || !list || list.length === 0) return;
-    
+
     const currentIndex = list.findIndex(t => t.id === track.id);
     if (currentIndex !== -1) {
       const prevIndex = (currentIndex - 1 + list.length) % list.length;
@@ -141,12 +142,12 @@ export const AudioProvider = ({ children }) => {
   const closePlayer = () => setIsPlayerOpen(false);
 
   return (
-    <AudioContext.Provider value={{ 
-      currentTrack, 
-      isPlaying, 
-      positionMs, 
-      durationMs, 
-      playTrack, 
+    <AudioContext.Provider value={{
+      currentTrack,
+      isPlaying,
+      positionMs,
+      durationMs,
+      playTrack,
       togglePlayPause,
       seekTo,
       playNext,

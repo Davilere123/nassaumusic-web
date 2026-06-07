@@ -1,4 +1,10 @@
-/* src/screens/SearchScreen.css */
+/**
+ * SearchScreen.css
+ * 
+ * Estilos da tela de pesquisa.
+ * Contém a barra de pesquisa customizada e a grade de resultados unificada.
+ */
+
 .search-container {
   flex: 1;
   background-color: #06000c;
@@ -54,7 +60,8 @@
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 16px;
-  padding-bottom: 110px; /* Space for bottom tabs */
+  padding-bottom: 110px;
+  /* Space for bottom tabs */
 }
 
 .search-card {
@@ -81,10 +88,9 @@
   text-align: left;
 }
 
-/* Search Results */
 .search-results {
   margin-top: 24px;
-  padding-bottom: 110px; /* Space for bottom tabs */
+  padding-bottom: 110px;
 }
 
 .search-section {

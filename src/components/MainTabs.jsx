@@ -1,4 +1,10 @@
-// src/components/MainTabs.jsx
+/**
+ * MainTabs.jsx
+ * 
+ * Controlador de abas principais (Navegação Inferior).
+ * Ele altera qual tela está visível e mantém a barra fixa na base do aplicativo.
+ */
+
 import React, { useState } from 'react';
 import { Home, Search, Library } from 'lucide-react';
 import './MainTabs.css';
@@ -26,7 +32,7 @@ export default function MainTabs({ navigate }) {
       </div>
 
       <nav className="tabs-bar">
-        <button 
+        <button
           className={`tab-item ${activeTab === 'Inicio' ? 'active' : ''}`}
           onClick={() => setActiveTab('Inicio')}
         >
@@ -34,7 +40,7 @@ export default function MainTabs({ navigate }) {
           <span className="tab-label">Início</span>
         </button>
 
-        <button 
+        <button
           className={`tab-item ${activeTab === 'Buscar' ? 'active' : ''}`}
           onClick={() => setActiveTab('Buscar')}
         >
@@ -42,7 +48,7 @@ export default function MainTabs({ navigate }) {
           <span className="tab-label">Buscar</span>
         </button>
 
-        <button 
+        <button
           className={`tab-item ${activeTab === 'Biblioteca' ? 'active' : ''}`}
           onClick={() => setActiveTab('Biblioteca')}
         >

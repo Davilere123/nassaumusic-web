@@ -1,6 +1,11 @@
-// src/screens/FriendProfileScreen.jsx
+/**
+ * FriendProfileScreen.jsx
+ * 
+ * Exibe o perfil social de um amigo, incluindo a atividade recente
+ * dele e a música que está ouvindo no momento.
+ */
 import React from 'react';
-import { ChevronLeft } from 'lucide-react';
+import { ChevronLeft, Music } from 'lucide-react';
 import './FriendProfileScreen.css';
 
 export default function FriendProfileScreen({ friend, goBack }) {

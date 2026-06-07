@@ -1,5 +1,10 @@
-/* src/screens/PlayerScreen.css */
-/* Mobile First: Fullscreen */
+/**
+ * PlayerScreen.css
+ * 
+ * Estilos do player principal (tela cheia/modal).
+ * Contém animações, blur, manipulação do slider HTML5 e design responsivo (PC vs Mobile).
+ */
+
 .player-overlay {
   position: fixed;
   top: 0;
@@ -7,11 +12,9 @@
   right: 0;
   bottom: 0;
   background-color: rgba(147, 51, 234, 0.15);
-  /* Fundo lilás transparente do mobile */
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
   box-shadow: inset 0 0 100px rgba(0, 0, 0, 0.5);
-  /* Sombra interna reduzida */
   z-index: 2000;
   display: flex;
   flex-direction: column;
@@ -68,7 +71,6 @@
   padding: 0 25px;
   margin-bottom: 20px;
   text-align: center;
-  /* Centralizado como pedido */
   filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.6));
 }
 
@@ -94,7 +96,6 @@
   filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.4));
 }
 
-/* Custom HTML5 Range Input to look like a slider */
 .player-slider {
   -webkit-appearance: none;
   appearance: none;
@@ -157,22 +158,17 @@
   transform: scale(0.9);
 }
 
-/* PC / Tablet Responsiveness: Centered Modal */
 @media (min-width: 768px) {
   .player-overlay {
     background-color: rgba(0, 0, 0, 0.4);
-    /* Fundo escuro atrás do modal */
     backdrop-filter: blur(5px);
   }
 
   .player-modal-content {
     background-color: rgba(147, 51, 234, 0.15);
-    /* Mesma transparência lilás */
     backdrop-filter: blur(25px);
-    /* Super blur no player do PC */
     -webkit-backdrop-filter: blur(25px);
     border: 1px solid rgba(147, 51, 234, 0.3);
-    /* Bordinha lilás */
     border-radius: 20px;
     padding: 40px;
     width: 400px;

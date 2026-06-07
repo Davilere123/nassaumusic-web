@@ -1,4 +1,9 @@
-// src/screens/HomeScreen.jsx
+/**
+ * HomeScreen.jsx
+ * 
+ * A tela inicial principal ("Início").
+ * Exibe as listas de recomendação, atividade dos amigos e as faixas via streaming (mock).
+ */
 import React from 'react';
 import { Music, LogOut } from 'lucide-react';
 import './HomeScreen.css';

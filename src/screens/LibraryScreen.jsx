@@ -1,4 +1,9 @@
-// src/screens/LibraryScreen.jsx
+/**
+ * LibraryScreen.jsx
+ * 
+ * Permite ao usuário importar arquivos de áudio locais do seu próprio dispositivo
+ * e os mantém persistidos (via Lifting State Up) na sessão atual.
+ */
 import React, { useState, useRef } from 'react';
 import { Trash2 } from 'lucide-react';
 import './LibraryScreen.css';

@@ -1,11 +1,11 @@
-// mockData.js
+// Informações de placeholder
 export const tracks = [
   {
-    id: 'track_01', 
-    title: 'Brisa de Verão', 
+    id: 'track_01',
+    title: 'Brisa de Verão',
     artist: 'Banda Maré',
     artwork: 'https://picsum.photos/id/10/200/200',
-    url: 'https://www.soundhelix.com/examples/mp3/SoundHelix-Song-8.mp3', 
+    url: 'https://www.soundhelix.com/examples/mp3/SoundHelix-Song-8.mp3',
   },
   {
     id: 'track_02',
@@ -24,24 +24,24 @@ export const tracks = [
 ];
 
 export const recommendedAlbums = [
-  { 
-    id: 'album_01', 
-    title: 'Indie Vibes', 
-    type: 'Playlist', 
+  {
+    id: 'album_01',
+    title: 'Indie Vibes',
+    type: 'Playlist',
     image: 'https://picsum.photos/id/1025/200/200',
-    songs: [tracks[0], tracks[1]] 
+    songs: [tracks[0], tracks[1]]
   },
-  { 
-    id: 'album_02', 
-    title: 'Vibe Musical', 
-    type: 'Playlist', 
+  {
+    id: 'album_02',
+    title: 'Vibe Musical',
+    type: 'Playlist',
     image: 'https://picsum.photos/id/1032/200/200',
-    songs: [tracks[0]] 
+    songs: [tracks[0]]
   },
-  { 
-    id: 'album_03', 
-    title: 'Foco e Estudo', 
-    type: 'Playlist', 
+  {
+    id: 'album_03',
+    title: 'Foco e Estudo',
+    type: 'Playlist',
     image: 'https://picsum.photos/id/1010/200/200',
     songs: [tracks[2]]
   },

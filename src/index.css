@@ -1,4 +1,10 @@
-/* src/index.css */
+/**
+ * index.css
+ * 
+ * Estilos globais da aplicação.
+ * Define a cor de fundo padrão, reset de margens e a fonte principal.
+ */
+
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
@@ -17,7 +23,7 @@ body {
   min-height: 100vh;
   min-height: 100dvh;
   height: 100dvh;
-  overflow: hidden; /* Avoid double scrollbars, handle scroll in components */
+  overflow: hidden;
 }
 
 #root {

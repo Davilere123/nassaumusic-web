@@ -1,7 +1,13 @@
-/* src/screens/AuthScreen.css */
+/**
+ * AuthScreen.css
+ * 
+ * Estilos da tela de autenticação.
+ * Centraliza o formulário e gerencia o layout do botão de entrada.
+ */
+
 .auth-container {
   flex: 1;
-  background-color: #06000c; /* Dark modern theme */
+  background-color: #06000c;
   height: 100vh;
   height: 100dvh;
   width: 100vw;
@@ -19,7 +25,7 @@
   height: 350px;
   border-bottom-left-radius: 150px;
   border-bottom-right-radius: 150px;
-  background-color: rgba(147, 51, 234, 0.1); /* Subtle lilac */
+  background-color: rgba(147, 51, 234, 0.1);
   flex-shrink: 0;
 }
 
@@ -30,7 +36,7 @@
   align-items: center;
   justify-content: center;
   padding: 20px;
-  margin-top: -100px; /* Pull up to overlap top view */
+  margin-top: -100px;
 }
 
 .auth-logo-icon {
@@ -65,7 +71,10 @@
 .auth-primary-btn:hover {
   background-color: #7e22ce;
 }
-.auth-primary-btn:active { transform: scale(0.98); }
+
+.auth-primary-btn:active {
+  transform: scale(0.98);
+}
 
 .auth-primary-btn-text {
   color: #fff;
@@ -96,7 +105,10 @@
 .auth-secondary-btn:hover {
   background-color: rgba(147, 51, 234, 0.1);
 }
-.auth-secondary-btn:active { transform: scale(0.98); }
+
+.auth-secondary-btn:active {
+  transform: scale(0.98);
+}
 
 .auth-secondary-btn-text {
   color: #9333ea;
@@ -104,7 +116,6 @@
   font-weight: bold;
 }
 
-/* FORM VIEW */
 .auth-form-header {
   display: flex;
   flex-direction: row;
@@ -134,7 +145,7 @@
 }
 
 .auth-form-spacer {
-  width: 34px; /* balance out the back button */
+  width: 34px;
 }
 
 .auth-form-content {
@@ -188,7 +199,10 @@
 .auth-action-btn:hover {
   background-color: #7e22ce;
 }
-.auth-action-btn:active { transform: scale(0.95); }
+
+.auth-action-btn:active {
+  transform: scale(0.95);
+}
 
 .auth-action-btn-text {
   color: #fff;
