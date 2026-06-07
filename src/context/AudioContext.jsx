@@ -22,35 +22,36 @@ export const AudioProvider = ({ children }) => {
     const updateTime = () => setPositionMs(audio.currentTime * 1000);
     const updateDuration = () => setDurationMs(audio.duration * 1000);
     const handleEnded = () => setIsPlaying(false);
+    const handlePlayEvent = () => setIsPlaying(true);
+    const handlePauseEvent = () => setIsPlaying(false);
 
     audio.addEventListener('timeupdate', updateTime);
     audio.addEventListener('loadedmetadata', updateDuration);
     audio.addEventListener('ended', handleEnded);
+    audio.addEventListener('play', handlePlayEvent);
+    audio.addEventListener('pause', handlePauseEvent);
 
     return () => {
       audio.removeEventListener('timeupdate', updateTime);
       audio.removeEventListener('loadedmetadata', updateDuration);
       audio.removeEventListener('ended', handleEnded);
+      audio.removeEventListener('play', handlePlayEvent);
+      audio.removeEventListener('pause', handlePauseEvent);
     };
   }, []);
 
   const playTrack = (track) => {
     setCurrentTrack(track);
     audioRef.current.src = track.url;
-    audioRef.current.play()
-      .then(() => setIsPlaying(true))
-      .catch(e => console.error("Error playing audio", e));
+    audioRef.current.play().catch(e => console.error("Error playing audio", e));
   };
 
   const togglePlayPause = () => {
     if (!currentTrack) return;
     if (isPlaying) {
       audioRef.current.pause();
-      setIsPlaying(false);
     } else {
-      audioRef.current.play()
-        .then(() => setIsPlaying(true))
-        .catch(e => console.error("Error playing audio", e));
+      audioRef.current.play().catch(e => console.error("Error playing audio", e));
     }
   };
 

@@ -1,7 +1,8 @@
 /* src/screens/HomeScreen.css */
 .home-container {
   flex: 1;
-  background-color: #06000c; /* Tema Dark Mode Moderno sugerido */
+  background-color: #06000c;
+  /* Tema Dark Mode Moderno sugerido */
   height: 100vh;
   width: 100%;
   overflow-y: auto;
@@ -32,6 +33,56 @@
   display: flex;
 }
 
+/* Logout Button */
+.home-logout-btn {
+  background-color: rgba(220, 38, 114, 0.15);
+  /* Vermelhinho com blur */
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  border: 1px solid rgba(220, 38, 84, 0.3);
+  border-radius: 20px;
+  padding: 8px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  color: #fff;
+  overflow: hidden;
+}
+
+.home-logout-text {
+  font-size: 14px;
+  font-weight: bold;
+  white-space: nowrap;
+  display: inline-block;
+  opacity: 1;
+  width: auto;
+  transition: all 0.3s ease;
+}
+
+/* PC */
+@media (min-width: 768px) {
+  .home-logout-text {
+    width: 0;
+    opacity: 0;
+    margin-left: -8px;
+    /* Remove o espaçamento do gap quando invisível */
+  }
+
+  .home-logout-btn:hover .home-logout-text {
+    width: 30px;
+    /* Largura da palavra Sair */
+    opacity: 1;
+    margin-left: 0;
+  }
+
+  .home-logout-btn:hover {
+    background-color: rgba(220, 38, 38, 0.25);
+  }
+}
+
 /* Sections */
 .section {
   margin-top: 24px;
@@ -56,6 +107,7 @@
   -ms-overflow-style: none;
   scrollbar-width: none;
 }
+
 .horizontal-scroll::-webkit-scrollbar {
   display: none;
 }
