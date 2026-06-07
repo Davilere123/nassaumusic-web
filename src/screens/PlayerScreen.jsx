@@ -1,10 +1,17 @@
-// src/screens/PlayerScreen.jsx
+/**
+ * PlayerScreen.jsx
+ * 
+ * Este é o componente que renderiza o "Player Gigante" em tela cheia (no celular)
+ * ou como um modal centralizado (no PC). Ele controla diretamente a reprodução,
+ * avanço, retrocesso e a linha do tempo (slider).
+ */
 import React from 'react';
 import { ChevronDown, Play, Pause, SkipBack, SkipForward } from 'lucide-react';
 import { useAudio } from '../context/AudioContext';
 import './PlayerScreen.css';
 
 export default function PlayerScreen() {
+  // Extrai todas as funções vitais de controle do nosso AudioContext
   const {
     currentTrack,
     isPlaying,
@@ -18,6 +25,7 @@ export default function PlayerScreen() {
     closePlayer
   } = useAudio();
 
+  // Função utilitária para formatar milissegundos em minutos e segundos (ex: 3:45)
   const formatTime = (millis) => {
     if (!millis || isNaN(millis)) return "0:00";
     const totalSeconds = Math.floor(millis / 1000);

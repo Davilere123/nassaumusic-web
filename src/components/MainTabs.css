@@ -28,13 +28,13 @@
   /* Glassmorphism lilás */
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
-  transform: translate3d(0, 0, 0); /* Força a aceleração de hardware no iOS para corrigir o blur */
   display: flex;
   justify-content: space-around;
   align-items: center;
   padding-bottom: 15px;
   /* safe area like */
   border-top: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 -4px 30px rgba(0, 0, 0, 0.4); /* Sombra elegante reduzida */
   z-index: 1000;
 }
 
@@ -49,6 +49,7 @@
   color: #b3b3b3;
   transition: color 0.2s cubic-bezier(0.25, 0.8, 0.25, 1), transform 0.2s cubic-bezier(0.25, 0.8, 0.25, 1);
   padding: 10px;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.6)); /* Sombra nos ícones e textos */
 }
 
 .tab-item:hover {
@@ -58,6 +59,7 @@
 
 .tab-item.active {
   color: #9333ea;
+  filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.8)) drop-shadow(0 0 10px rgba(147, 51, 234, 0.5)); /* Sombra escura para legibilidade + brilho lilás */
 }
 
 .tab-label {
